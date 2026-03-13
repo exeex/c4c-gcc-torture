@@ -1,0 +1,1715 @@
+# llvm gcc-c-torture allowlist
+# Updated on 2026-03-10
+src/20000223-1.c
+src/20000722-1.c
+# 20010122-1.c  # non-frontend blocker on arm64: undefined ___builtin_return_address/_alloca
+# 20010209-1.c  # FRONTEND_FAIL: GCC nested functions extension not supported
+src/20010123-1.c
+src/20010605-2.c
+src/20010924-1.c
+src/20020206-2.c
+src/20020320-1.c
+src/20020411-1.c
+src/20020619-1.c
+src/20030408-1.c
+src/20030910-1.c
+src/20040302-1.c
+src/20040709-1.c
+src/20040709-2.c
+src/20040709-3.c
+src/20041124-1.c
+src/20041201-1.c
+src/20041214-1.c
+src/20070614-1.c
+src/20071029-1.c
+src/20071210-1.c
+src/20071211-1.c
+src/20071219-1.c
+src/20071220-1.c
+src/20071220-2.c
+src/20080519-1.c
+src/20180921-1.c
+src/920501-4.c
+src/920501-5.c
+src/930526-1.c
+src/930603-1.c
+src/930608-1.c
+src/930930-1.c
+src/970214-1.c
+src/970214-2.c
+src/991228-1.c
+# bcp-1.c  # BACKEND_FAIL: undefined ___builtin_constant_p (platform runtime, not frontend)
+src/builtin-types-compatible-p.c
+# comp-goto-1.c  # needs computed goto (GNU indirectbr/blockaddress), not implemented
+src/complex-1.c
+src/complex-2.c
+src/complex-5.c
+src/complex-6.c
+src/ffs-2.c
+src/ieee/fp-cmp-1.c
+src/ieee/fp-cmp-2.c
+src/ieee/fp-cmp-3.c
+src/ieee/pr50310.c
+src/ieee/pr72824-2.c
+src/multi-ix.c
+# pr22061-1.c  # BACKEND_FAIL: requires _alloca builtin (macOS doesn't provide it); VLA param stride also unimplemented
+src/pr22098-1.c
+src/pr22098-2.c
+src/pr22098-3.c
+src/pr30778.c
+src/pr33382.c
+src/pr35472.c
+src/pr38151.c
+src/pr38533.c
+src/pr40022.c
+src/pr40657.c
+src/pr41239.c
+# pr41935.c  # FRONTEND_FAIL: VLA struct member + __builtin_offsetof with subscript not supported
+src/pr43236.c
+src/pr44468.c
+src/pr45695.c
+src/pr46309.c
+src/pr48571-1.c
+src/pr49279.c
+src/pr49390.c
+src/pr51877.c
+src/pr51933.c
+src/pr53645-2.c
+src/pr53645.c
+src/pr56205.c
+src/pr56982.c
+src/pr57344-1.c
+src/pr57344-2.c
+src/pr57344-3.c
+src/pr57344-4.c
+src/pr63641.c
+src/pr65053-2.c
+src/pr65648.c
+src/pr65956.c
+src/pr68328.c
+src/pr69320-2.c
+src/pr70460.c
+src/pr70903.c
+src/pr78438.c
+src/pr78726.c
+src/pr79354.c
+src/pr79737-2.c
+src/pr80421.c
+# pr80692.c  # FRONTEND_FAIL: DFP (_Decimal64) extension not supported
+src/pr81588.c
+src/pr82954.c
+src/pr84478.c
+src/pr84524.c
+src/pr85156.c
+src/pr85169.c
+src/pr86528.c
+src/pr88904.c
+src/strlen-4.c
+src/strlen-7.c
+src/struct-ini-4.c
+
+# Expanded allowlist - frontend-passing batch added 2026-03-06
+src/20000112-1.c
+src/20000113-1.c
+src/20000121-1.c
+src/20000205-1.c
+src/20000217-1.c
+src/20000224-1.c
+src/20000225-1.c
+src/20000227-1.c
+src/20000313-1.c
+src/20000314-1.c
+src/20000314-2.c
+src/20000314-3.c
+src/20000402-1.c
+src/20000403-1.c
+src/20000412-1.c
+src/20000412-2.c
+src/20000412-3.c
+src/20000412-4.c
+src/20000412-5.c
+src/20000412-6.c
+src/20000419-1.c
+src/20000422-1.c
+src/20000503-1.c
+src/20000511-1.c
+src/20000519-1.c
+src/20000519-2.c
+src/20000523-1.c
+src/20000528-1.c
+src/20000603-1.c
+src/20000605-1.c
+src/20000605-2.c
+src/20000605-3.c
+src/20000622-1.c
+src/20000703-1.c
+src/20000706-1.c
+src/20000706-2.c
+src/20000706-3.c
+src/20000706-4.c
+src/20000706-5.c
+src/20000707-1.c
+src/20000715-1.c
+src/20000715-2.c
+src/20000717-1.c
+src/20000717-2.c
+src/20000717-3.c
+src/20000717-4.c
+src/20000717-5.c
+src/20000726-1.c
+src/20000731-1.c
+src/20000731-2.c
+src/20000801-1.c
+src/20000801-2.c
+src/20000801-3.c
+src/20000801-4.c
+src/20000808-1.c
+src/20000815-1.c
+src/20000818-1.c
+src/20000819-1.c
+# 20000822-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20000910-1.c
+src/20000910-2.c
+src/20000914-1.c
+src/20000917-1.c
+src/20001009-1.c
+src/20001009-2.c
+src/20001011-1.c
+src/20001013-1.c
+src/20001017-1.c
+src/20001017-2.c
+src/20001024-1.c
+src/20001026-1.c
+src/20001027-1.c
+src/20001031-1.c
+src/20001101.c
+src/20001108-1.c
+# 20001111-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20001112-1.c
+src/20001121-1.c
+src/20001124-1.c
+src/20001130-1.c
+src/20001130-2.c
+src/20001203-1.c
+src/20001203-2.c
+src/20001221-1.c
+src/20001228-1.c
+src/20001229-1.c
+src/20010106-1.c
+src/20010114-1.c
+src/20010116-1.c
+src/20010118-1.c
+src/20010119-1.c
+# 20010122-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20010129-1.c
+src/20010206-1.c
+src/20010221-1.c
+src/20010222-1.c
+src/20010224-1.c
+src/20010325-1.c
+src/20010329-1.c
+src/20010403-1.c
+src/20010409-1.c
+src/20010422-1.c
+src/20010518-1.c
+src/20010518-2.c
+src/20010520-1.c
+src/20010604-1.c
+# 20010605-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20010711-1.c
+src/20010717-1.c
+src/20010723-1.c
+src/20010904-1.c
+src/20010904-2.c
+src/20010910-1.c
+src/20010915-1.c
+src/20010925-1.c
+src/20011008-3.c
+src/20011019-1.c
+src/20011024-1.c
+src/20011109-1.c
+src/20011109-2.c
+src/20011113-1.c
+src/20011114-1.c
+src/20011115-1.c
+src/20011121-1.c
+src/20011126-1.c
+src/20011126-2.c
+src/20011128-1.c
+src/20011217-1.c
+src/20011219-1.c
+src/20011223-1.c
+src/20020103-1.c
+src/20020107-1.c
+src/20020108-1.c
+src/20020118-1.c
+src/20020127-1.c
+src/20020129-1.c
+src/20020201-1.c
+src/20020206-1.c
+src/20020213-1.c
+src/20020215-1.c
+src/20020216-1.c
+src/20020219-1.c
+src/20020225-1.c
+src/20020225-2.c
+src/20020226-1.c
+# 20020227-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20020307-1.c
+# 20020314-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20020321-1.c
+src/20020328-1.c
+src/20020402-1.c
+src/20020402-2.c
+src/20020402-3.c
+src/20020404-1.c
+src/20020406-1.c
+# 20020412-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20020413-1.c
+# 20020418-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20020423-1.c
+src/20020503-1.c
+src/20020506-1.c
+src/20020508-1.c
+src/20020508-2.c
+src/20020508-3.c
+src/20020510-1.c
+src/20020529-1.c
+src/20020611-1.c
+src/20020614-1.c
+src/20020615-1.c
+src/20020716-1.c
+# 20020720-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20020805-1.c
+src/20020810-1.c
+src/20020819-1.c
+src/20020904-1.c
+src/20020911-1.c
+src/20020916-1.c
+src/20020920-1.c
+src/20021010-1.c
+src/20021010-2.c
+src/20021011-1.c
+src/20021015-1.c
+src/20021024-1.c
+src/20021111-1.c
+# 20021113-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20021118-1.c
+src/20021118-2.c
+src/20021118-3.c
+src/20021119-1.c
+src/20021120-1.c
+src/20021120-2.c
+src/20021120-3.c
+src/20021127-1.c
+src/20021204-1.c
+src/20021219-1.c
+src/20030105-1.c
+src/20030109-1.c
+src/20030117-1.c
+src/20030120-1.c
+src/20030120-2.c
+src/20030125-1.c
+src/20030128-1.c
+src/20030203-1.c
+src/20030209-1.c
+src/20030216-1.c
+src/20030218-1.c
+src/20030221-1.c
+src/20030222-1.c
+src/20030224-2.c
+src/20030307-1.c
+src/20030313-1.c
+src/20030316-1.c
+# 20030323-1.c  # BACKEND_FAIL: __builtin_return_address not resolved by linker
+src/20030330-1.c
+src/20030401-1.c
+src/20030403-1.c
+src/20030404-1.c
+# 20030501-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20030606-1.c
+src/20030613-1.c
+src/20030626-1.c
+src/20030626-2.c
+src/20030714-1.c
+src/20030715-1.c
+src/20030717-1.c
+src/20030718-1.c
+# 20030811-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20030821-1.c
+src/20030828-1.c
+src/20030828-2.c
+src/20030903-1.c
+src/20030909-1.c
+src/20030913-1.c
+src/20030914-1.c
+src/20030914-2.c
+src/20030916-1.c
+src/20030920-1.c
+src/20030928-1.c
+# 20031003-1.c  # CLANG_ABORT: clang binary aborts, c2ll exits 0
+src/20031010-1.c
+src/20031011-1.c
+src/20031012-1.c
+src/20031020-1.c
+src/20031201-1.c
+src/20031204-1.c
+src/20031211-1.c
+src/20031211-2.c
+src/20031214-1.c
+src/20031215-1.c
+src/20031216-1.c
+src/20040208-1.c
+src/20040218-1.c
+# 20040223-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20040307-1.c
+# 20040308-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20040309-1.c
+src/20040311-1.c
+src/20040313-1.c
+src/20040319-1.c
+src/20040331-1.c
+src/20040409-1.c
+src/20040409-1w.c
+src/20040409-2.c
+src/20040409-2w.c
+src/20040409-3.c
+src/20040409-3w.c
+src/20040411-1.c
+# 20040423-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# 20040520-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20040625-1.c
+src/20040629-1.c
+src/20040703-1.c
+src/20040704-1.c
+src/20040705-1.c
+src/20040705-2.c
+src/20040706-1.c
+src/20040707-1.c
+src/20040805-1.c
+src/20040811-1.c
+src/20040820-1.c
+src/20040823-1.c
+src/20040831-1.c
+src/20040917-1.c
+src/20041011-1.c
+src/20041019-1.c
+src/20041112-1.c
+src/20041113-1.c
+src/20041114-1.c
+src/20041126-1.c
+src/20041210-1.c
+src/20041212-1.c
+src/20041213-2.c
+src/20041218-1.c
+# 20041218-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20050104-1.c
+src/20050106-1.c
+src/20050107-1.c
+src/20050111-1.c
+src/20050119-1.c
+src/20050119-2.c
+src/20050121-1.c
+src/20050124-1.c
+src/20050125-1.c
+src/20050131-1.c
+src/20050203-1.c
+src/20050215-1.c
+src/20050218-1.c
+src/20050224-1.c
+# 20050316-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# 20050316-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# 20050316-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20050410-1.c
+src/20050502-1.c
+src/20050502-2.c
+src/20050604-1.c
+src/20050607-1.c
+src/20050613-1.c
+src/20050713-1.c
+src/20050826-1.c
+src/20050826-2.c
+src/20050929-1.c
+src/20051012-1.c
+src/20051021-1.c
+src/20051104-1.c
+src/20051110-1.c
+src/20051110-2.c
+src/20051113-1.c
+src/20051215-1.c
+src/20060102-1.c
+src/20060110-1.c
+src/20060110-2.c
+src/20060127-1.c
+src/20060412-1.c
+# 20060420-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20060905-1.c
+src/20060910-1.c
+src/20060929-1.c
+src/20060930-1.c
+src/20060930-2.c
+src/20061031-1.c
+src/20061101-1.c
+src/20061101-2.c
+# 20061220-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20070201-1.c
+src/20070212-1.c
+src/20070212-2.c
+src/20070212-3.c
+src/20070424-1.c
+src/20070517-1.c
+src/20070623-1.c
+src/20070724-1.c
+src/20070824-1.c
+# 20070919-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/20071011-1.c
+src/20071018-1.c
+src/20071030-1.c
+src/20071108-1.c
+src/20071120-1.c
+src/20071202-1.c
+src/20071205-1.c
+src/20071213-1.c
+src/20071216-1.c
+src/20080117-1.c
+src/20080122-1.c
+src/20080222-1.c
+src/20080408-1.c
+src/20080424-1.c
+src/20080502-1.c
+src/20080506-1.c
+src/20080506-2.c
+src/20080522-1.c
+src/20080529-1.c
+src/20080604-1.c
+src/20080719-1.c
+src/20080813-1.c
+src/20081103-1.c
+src/20081112-1.c
+src/20081117-1.c
+src/20081218-1.c
+src/20090113-1.c
+src/20090113-2.c
+src/20090113-3.c
+src/20090207-1.c
+# 20090219-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20090527-1.c
+src/20090623-1.c
+src/20090711-1.c
+src/20090814-1.c
+src/20091229-1.c
+src/20100209-1.c
+src/20100316-1.c
+src/20100416-1.c
+src/20100430-1.c
+src/20100708-1.c
+src/20100805-1.c
+src/20100827-1.c
+src/20101011-1.c
+src/20101013-1.c
+src/20101025-1.c
+src/20110418-1.c
+src/20111208-1.c
+src/20111212-1.c
+src/20111227-1.c
+src/20120105-1.c
+src/20120111-1.c
+src/20120207-1.c
+src/20120427-1.c
+src/20120427-2.c
+src/20120615-1.c
+src/20120808-1.c
+src/20120817-1.c
+src/20120919-1.c
+src/20121108-1.c
+src/20131127-1.c
+src/20140212-1.c
+src/20140212-2.c
+src/20140326-1.c
+src/20140425-1.c
+src/20140622-1.c
+src/20140828-1.c
+src/20141022-1.c
+src/20141107-1.c
+src/20141125-1.c
+src/20150611-1.c
+src/20170111-1.c
+src/20170401-1.c
+src/20170401-2.c
+src/20170419-1.c
+src/20171008-1.c
+src/20180112-1.c
+src/20180131-1.c
+src/20180226-1.c
+src/20181120-1.c
+src/20190228-1.c
+src/20190820-1.c
+src/900409-1.c
+src/920202-1.c
+# 920302-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/920409-1.c
+src/920410-1.c
+src/920411-1.c
+# 920415-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/920428-1.c
+# 920428-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/920429-1.c
+src/920501-1.c
+src/920501-2.c
+# 920501-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/920501-6.c
+# 920501-7.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/920501-8.c
+src/920501-9.c
+src/920506-1.c
+src/920520-1.c
+src/920603-1.c
+src/920604-1.c
+src/920612-1.c
+# 920612-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/920618-1.c
+src/920625-1.c
+src/920710-1.c
+src/920711-1.c
+src/920721-1.c
+src/920721-2.c
+src/920721-3.c
+# 920721-4.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/920726-1.c
+# 920728-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/920730-1.c
+src/920731-1.c
+src/920810-1.c
+src/920812-1.c
+src/920829-1.c
+src/920908-1.c
+src/920908-2.c
+src/920909-1.c
+src/920922-1.c
+src/920929-1.c
+src/921006-1.c
+src/921007-1.c
+src/921013-1.c
+src/921016-1.c
+# 921017-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/921019-1.c
+src/921019-2.c
+src/921029-1.c
+src/921104-1.c
+src/921110-1.c
+src/921112-1.c
+src/921113-1.c
+src/921117-1.c
+src/921123-1.c
+src/921123-2.c
+src/921124-1.c
+src/921202-1.c
+src/921202-2.c
+src/921204-1.c
+src/921207-1.c
+src/921208-1.c
+src/921208-2.c
+# 921215-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/921218-1.c
+src/921218-2.c
+src/930106-1.c
+src/930111-1.c
+src/930123-1.c
+src/930126-1.c
+src/930208-1.c
+src/930406-1.c
+src/930408-1.c
+src/930429-1.c
+src/930429-2.c
+src/930513-1.c
+src/930513-2.c
+src/930518-1.c
+src/930527-1.c
+src/930529-1.c
+src/930603-2.c
+src/930603-3.c
+src/930614-1.c
+src/930614-2.c
+src/930621-1.c
+src/930622-1.c
+src/930622-2.c
+# 930628-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/930630-1.c
+src/930702-1.c
+src/930713-1.c
+src/930718-1.c
+src/930719-1.c
+src/930725-1.c
+src/930818-1.c
+src/930916-1.c
+src/930921-1.c
+src/930929-1.c
+src/930930-2.c
+# 931002-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/931004-10.c
+src/931004-11.c
+src/931004-12.c
+src/931004-13.c
+src/931004-14.c
+src/931004-1.c
+src/931004-2.c
+src/931004-3.c
+src/931004-4.c
+src/931004-5.c
+src/931004-6.c
+src/931004-7.c
+src/931004-8.c
+src/931004-9.c
+src/931005-1.c
+src/931009-1.c
+src/931012-1.c
+src/931017-1.c
+src/931018-1.c
+src/931031-1.c
+src/931102-1.c
+src/931102-2.c
+src/931110-1.c
+src/931110-2.c
+src/931208-1.c
+src/931228-1.c
+src/940115-1.c
+src/940122-1.c
+src/941014-1.c
+src/941014-2.c
+src/941015-1.c
+src/941021-1.c
+src/941025-1.c
+src/941031-1.c
+src/941101-1.c
+src/941110-1.c
+# 941202-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/950221-1.c
+src/950322-1.c
+src/950426-1.c
+src/950426-2.c
+src/950503-1.c
+src/950511-1.c
+src/950512-1.c
+src/950605-1.c
+src/950607-1.c
+src/950607-2.c
+src/950612-1.c
+src/950621-1.c
+src/950628-1.c
+src/950704-1.c
+src/950706-1.c
+src/950710-1.c
+src/950714-1.c
+src/950809-1.c
+src/950906-1.c
+src/950915-1.c
+src/950929-1.c
+src/951003-1.c
+src/951115-1.c
+src/951204-1.c
+src/960116-1.c
+src/960117-1.c
+src/960209-1.c
+src/960215-1.c
+src/960218-1.c
+src/960219-1.c
+src/960301-1.c
+src/960302-1.c
+src/960311-1.c
+src/960311-2.c
+src/960311-3.c
+src/960312-1.c
+src/960317-1.c
+src/960321-1.c
+src/960326-1.c
+src/960327-1.c
+src/960402-1.c
+src/960405-1.c
+# 960416-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/960419-1.c
+src/960419-2.c
+# 960512-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/960513-1.c
+src/960521-1.c
+src/960608-1.c
+src/960801-1.c
+src/960802-1.c
+src/960830-1.c
+src/960909-1.c
+src/961004-1.c
+src/961017-1.c
+src/961017-2.c
+src/961026-1.c
+src/961112-1.c
+src/961122-1.c
+src/961122-2.c
+src/961125-1.c
+src/961206-1.c
+src/961213-1.c
+src/961223-1.c
+src/970217-1.c
+src/970923-1.c
+src/980205.c
+# 980223.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/980424-1.c
+src/980505-1.c
+src/980505-2.c
+src/980506-1.c
+src/980506-2.c
+src/980506-3.c
+src/980526-1.c
+src/980526-2.c
+src/980526-3.c
+src/980602-1.c
+src/980602-2.c
+src/980604-1.c
+src/980605-1.c
+src/980608-1.c
+src/980612-1.c
+src/980617-1.c
+src/980618-1.c
+src/980701-1.c
+src/980707-1.c
+# 980709-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/980716-1.c
+src/980929-1.c
+src/981001-1.c
+src/981019-1.c
+src/981130-1.c
+src/981206-1.c
+src/990106-1.c
+src/990106-2.c
+src/990117-1.c
+src/990127-1.c
+src/990127-2.c
+src/990128-1.c
+src/990130-1.c
+src/990208-1.c
+src/990211-1.c
+src/990222-1.c
+src/990324-1.c
+src/990326-1.c
+src/990404-1.c
+# 990413-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/990513-1.c
+src/990524-1.c
+src/990525-1.c
+src/990525-2.c
+src/990527-1.c
+src/990531-1.c
+src/990604-1.c
+src/990628-1.c
+src/990804-1.c
+src/990811-1.c
+# 990826-0.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/990827-1.c
+src/990829-1.c
+src/990923-1.c
+# 991014-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/991016-1.c
+src/991019-1.c
+src/991023-1.c
+src/991030-1.c
+# 991112-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/991118-1.c
+src/991201-1.c
+src/991202-1.c
+src/991202-2.c
+src/991202-3.c
+src/991216-1.c
+src/991216-2.c
+src/991216-4.c
+src/991221-1.c
+src/991227-1.c
+src/alias-1.c
+# alias-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# alias-3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# alias-4.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/alias-access-path-1.c
+src/align-1.c
+src/align-2.c
+src/align-3.c
+# align-nest.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/alloca-1.c
+src/anon-1.c
+src/arith-1.c
+src/arith-rand.c
+src/arith-rand-ll.c
+src/ashldi-1.c
+src/ashrdi-1.c
+# bcp-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/bf64-1.c
+src/bf-layout-1.c
+src/bf-pack-1.c
+src/bf-sign-1.c
+src/bf-sign-2.c
+src/bitfld-1.c
+src/bitfld-2.c
+# bitfld-3.c  # BOTH_ABORT: both clang and c2ll abort
+src/bitfld-4.c
+# bitfld-5.c  # BOTH_ABORT: both clang and c2ll abort
+src/bitfld-6.c
+src/bitfld-7.c
+src/bswap-1.c
+src/bswap-2.c
+# builtin-bitops-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/builtin-constant.c
+# builtin-prefetch-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtin-prefetch-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtin-prefetch-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtin-prefetch-4.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtin-prefetch-5.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtin-prefetch-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/20010124-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/20010124-1-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/abs-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/abs-1-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/abs-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/abs-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/abs-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/abs-3-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/complex-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/complex-1-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# built-in-setjmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/fprintf.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/fprintf-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/fputs.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/fputs-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/abs.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/bfill.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/bzero.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/fprintf.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/main.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/memchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/memcmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/memmove.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/mempcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/memset.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/printf.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/sprintf.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/stpcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strcat.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strcmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strcspn.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/strlen.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strncat.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/strncmp.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/lib/strncpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strnlen.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strpbrk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strrchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strspn.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/lib/strstr.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/memchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memchr-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memcmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memcmp-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memcpy-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memcpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memmove-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/memops-asm.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memops-asm-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/mempcpy-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/mempcpy-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/mempcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/mempcpy-chk.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/mempcpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/mempcpy-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memset.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memset-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memset-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/memset-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/pr22237.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/pr22237-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/pr23484-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/pr23484-chk-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/printf.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/printf-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/snprintf-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/snprintf-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/sprintf.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/sprintf-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/sprintf-chk-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/sprintf-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/stpcpy-chk.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/stpcpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/stpncpy-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/stpncpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcat.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcat-chk.c  # FRONTEND_FAIL: complex __builtin_strcat_chk macros, multiple parse errors
+# builtins/strcat-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcat-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strchr-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcmp-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strcpy-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcpy-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcpy-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcpy-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcspn.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strcspn-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen-3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen-3-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strlen-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncat.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncat-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncat-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncat-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strncmp-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncmp-2-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncmp.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncmp-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncpy-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncpy-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strncpy-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strnlen.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strnlen-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strpbrk.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strpbrk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strpcpy-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strpcpy-2-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# builtins/strpcpy.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strpcpy-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strrchr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strrchr-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strspn.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strspn-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strstr-asm.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strstr-asm-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strstr.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/strstr-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/vsnprintf-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/vsnprintf-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/vsprintf-chk.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# builtins/vsprintf-chk-lib.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/call-trap-1.c
+src/cbrt.c
+src/cmpdi-1.c
+src/cmpsf-1.c
+src/cmpsi-1.c
+src/cmpsi-2.c
+src/compare-1.c
+src/compare-2.c
+src/compare-3.c
+src/comp-goto-1.c
+# comp-goto-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/complex-3.c
+# complex-4.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/complex-7.c
+src/compndlit-1.c
+src/const-addr-expr-1.c
+src/conversion.c
+src/cvt-1.c
+src/dbra-1.c
+src/divcmp-1.c
+src/divcmp-2.c
+src/divcmp-3.c
+src/divcmp-4.c
+src/divcmp-5.c
+src/divconst-1.c
+src/divconst-2.c
+src/divconst-3.c
+src/divmod-1.c
+src/doloop-1.c
+src/doloop-2.c
+# eeprof-1.c  # BOTH_ABORT: both clang and c2ll abort
+src/enum-1.c
+src/enum-2.c
+src/enum-3.c
+src/extzvsi.c
+src/ffs-1.c
+# float-floor.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/floatunsisf-1.c
+src/fprintf-1.c
+src/fprintf-2.c
+src/fprintf-chk-1.c
+# frame-address.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# func-ptr-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/gofast.c
+src/ieee/20000320-1.c
+src/ieee/20001122-1.c
+src/ieee/20010114-2.c
+src/ieee/20010226-1.c
+src/ieee/20011123-1.c
+src/ieee/20030331-1.c
+# ieee/20041213-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/ieee/920518-1.c
+src/ieee/920810-1.c
+src/ieee/930529-1.c
+src/ieee/980619-1.c
+src/ieee/acc1.c
+src/ieee/acc2.c
+src/ieee/builtin-nan-1.c
+src/ieee/compare-fp-1.c
+src/ieee/compare-fp-2.c
+src/ieee/compare-fp-3.c
+src/ieee/compare-fp-4.c
+src/ieee/copysign1.c
+src/ieee/copysign2.c
+src/ieee/fp-cmp-4.c
+src/ieee/fp-cmp-4e.c
+src/ieee/fp-cmp-4f.c
+src/ieee/fp-cmp-4l.c
+src/ieee/fp-cmp-5.c
+src/ieee/fp-cmp-6.c
+# ieee/fp-cmp-7.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/ieee/fp-cmp-8.c
+src/ieee/fp-cmp-8e.c
+src/ieee/fp-cmp-8f.c
+src/ieee/fp-cmp-8l.c
+src/ieee/hugeval.c
+src/ieee/inf-1.c
+src/ieee/inf-2.c
+src/ieee/inf-3.c
+src/ieee/minuszero.c
+src/ieee/mul-subnormal-single-1.c
+src/ieee/mzero2.c
+src/ieee/mzero3.c
+# ieee/mzero4.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/ieee/mzero5.c
+src/ieee/mzero6.c
+src/ieee/pr28634.c
+src/ieee/pr29302-1.c
+src/ieee/pr30704.c
+src/ieee/pr36332.c
+src/ieee/pr38016.c
+src/ieee/pr67218.c
+src/ieee/pr72824.c
+src/ieee/pr84235.c
+src/ieee/rbug.c
+src/ieee/unsafe-fp-assoc-1.c
+src/ieee/unsafe-fp-assoc.c
+src/ifcvt-onecmpl-abs-1.c
+src/index-1.c
+src/inst-check.c
+src/int-compare.c
+src/ipa-sra-1.c
+src/ipa-sra-2.c
+src/longlong.c
+src/loop-10.c
+src/loop-11.c
+src/loop-12.c
+src/loop-13.c
+src/loop-14.c
+src/loop-15.c
+src/loop-1.c
+src/loop-2b.c
+src/loop-2.c
+src/loop-2c.c
+src/loop-2d.c
+src/loop-2e.c
+src/loop-2f.c
+src/loop-2g.c
+src/loop-3b.c
+src/loop-3.c
+src/loop-3c.c
+src/loop-4b.c
+src/loop-4.c
+src/loop-5.c
+src/loop-6.c
+src/loop-7.c
+src/loop-8.c
+src/loop-9.c
+src/loop-ivopts-1.c
+src/loop-ivopts-2.c
+src/lshrdi-1.c
+src/lto-tbaa-1.c
+src/mayalias-1.c
+src/mayalias-2.c
+src/mayalias-3.c
+# medce-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/memchr-1.c
+src/memcpy-1.c
+src/memcpy-2.c
+src/memcpy-bi.c
+src/memset-1.c
+src/memset-2.c
+src/memset-3.c
+src/memset-4.c
+src/mod-1.c
+src/mode-dependent-address.c
+src/multdi-1.c
+# nest-align-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# nestfunc-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# nestfunc-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# nestfunc-3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/nestfunc-4.c
+# nestfunc-5.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# nestfunc-6.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# nestfunc-7.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# nest-stdar-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# noinit-attribute.c  # BOTH_ABORT: both clang and c2ll abort
+src/p18298.c
+src/packed-1.c
+src/packed-2.c
+src/pending-4.c
+src/postmod-1.c
+src/pr15262-1.c
+src/pr15262-2.c
+src/pr15262.c
+src/pr15296.c
+src/pr16790-1.c
+src/pr17078-1.c
+src/pr17133.c
+src/pr17252.c
+# pr17377.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr19005.c
+# pr19449.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr19515.c
+src/pr19606.c
+src/pr19687.c
+src/pr19689.c
+src/pr20100-1.c
+src/pr20187-1.c
+src/pr20466-1.c
+src/pr20527-1.c
+src/pr20601-1.c
+src/pr20621-1.c
+src/pr21173.c
+src/pr21331.c
+src/pr21964-1.c
+# pr22061-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr22061-2.c
+# pr22061-3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+# pr22061-4.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr22141-1.c
+src/pr22141-2.c
+src/pr22348.c
+src/pr22429.c
+src/pr22493-1.c
+src/pr22630.c
+src/pr23047.c
+# pr23135.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr23324.c
+src/pr23467.c
+src/pr23604.c
+src/pr23941.c
+# pr24135.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr24141.c
+src/pr24142.c
+src/pr24716.c
+src/pr24851.c
+src/pr25125.c
+src/pr25737.c
+src/pr27073.c
+src/pr27260.c
+src/pr27285.c
+src/pr27364.c
+src/pr27671-1.c
+src/pr28289.c
+src/pr28403.c
+src/pr28651.c
+src/pr28778.c
+# pr28865.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr28982a.c
+src/pr28982b.c
+src/pr29006.c
+src/pr29156.c
+src/pr29695-1.c
+src/pr29695-2.c
+src/pr29797-1.c
+src/pr29797-2.c
+src/pr29798.c
+src/pr30185.c
+src/pr31072.c
+src/pr31136.c
+src/pr31169.c
+src/pr31448-2.c
+src/pr31448.c
+src/pr31605.c
+# pr32244-1.c  # BOTH_ABORT: both clang and c2ll abort
+src/pr32500.c
+src/pr33142.c
+src/pr33631.c
+src/pr33669.c
+src/pr33779-1.c
+src/pr33779-2.c
+src/pr33870-1.c
+src/pr33870.c
+src/pr33992.c
+src/pr34070-1.c
+src/pr34070-2.c
+src/pr34099-2.c
+src/pr34099.c
+# pr34130.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr34154.c
+src/pr34176.c
+src/pr34415.c
+src/pr34456.c
+src/pr34768-1.c
+src/pr34768-2.c
+# pr34971.c  # BOTH_ABORT: both clang and c2ll abort
+src/pr34982.c
+src/pr35163.c
+src/pr35231.c
+src/pr35390.c
+src/pr35456.c
+src/pr35800.c
+src/pr36034-1.c
+src/pr36034-2.c
+src/pr36038.c
+src/pr36077.c
+# pr36093.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr36321.c
+src/pr36339.c
+src/pr36343.c
+src/pr36691.c
+src/pr36765.c
+src/pr37102.c
+src/pr37125.c
+src/pr37573.c
+src/pr37780.c
+src/pr37882.c
+src/pr37924.c
+src/pr37931.c
+src/pr38048-1.c
+src/pr38048-2.c
+src/pr38051.c
+src/pr38212.c
+src/pr38236.c
+src/pr38422.c
+src/pr38819.c
+src/pr38969.c
+src/pr39100.c
+src/pr39120.c
+# pr39228.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr39233.c
+src/pr39240.c
+src/pr39339.c
+src/pr39501.c
+src/pr40057.c
+src/pr40386.c
+src/pr40404.c
+src/pr40493.c
+src/pr40579.c
+src/pr40668.c
+src/pr40747.c
+src/pr41317.c
+src/pr41395-1.c
+src/pr41395-2.c
+src/pr41463.c
+src/pr41750.c
+src/pr41917.c
+src/pr41919.c
+src/pr42006.c
+src/pr42142.c
+src/pr42154.c
+# pr42231.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# pr42248.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr42269-2.c
+src/pr42512.c
+src/pr42544.c
+src/pr42570.c
+src/pr42614.c
+src/pr42691.c
+src/pr42721.c
+src/pr42833.c
+src/pr43008.c
+src/pr43220.c
+src/pr43269.c
+src/pr43385.c
+src/pr43438.c
+src/pr43560.c
+src/pr43629.c
+# pr43783.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr43784.c
+src/pr43835.c
+src/pr43987.c
+src/pr44164.c
+src/pr44202-1.c
+src/pr44555.c
+src/pr44575.c
+src/pr44683.c
+src/pr44828.c
+src/pr44852.c
+src/pr44858.c
+src/pr44942.c
+src/pr45034.c
+src/pr45070.c
+src/pr45262.c
+src/pr46019.c
+src/pr46316.c
+src/pr46909-1.c
+src/pr46909-2.c
+src/pr47148.c
+src/pr47155.c
+# pr47237.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr47299.c
+src/pr47337.c
+src/pr47538.c
+src/pr47925.c
+src/pr48197.c
+src/pr48717.c
+src/pr48809.c
+src/pr48814-1.c
+src/pr48814-2.c
+src/pr48973-1.c
+src/pr48973-2.c
+src/pr49039.c
+src/pr49073.c
+src/pr49123.c
+src/pr49161.c
+src/pr49186.c
+src/pr49218.c
+src/pr49281.c
+src/pr49419.c
+# pr49644.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr49712.c
+src/pr49768.c
+src/pr49886.c
+src/pr50865.c
+src/pr51023.c
+src/pr51323.c
+# pr51447.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr51466.c
+src/pr51581-1.c
+src/pr51581-2.c
+src/pr52129.c
+src/pr52209.c
+src/pr52286.c
+src/pr52760.c
+src/pr52979-1.c
+src/pr52979-2.c
+src/pr53084.c
+src/pr53160.c
+src/pr53465.c
+src/pr53688.c
+src/pr54471.c
+src/pr54937.c
+src/pr54985.c
+src/pr55137.c
+src/pr55750.c
+src/pr55875.c
+src/pr56051.c
+src/pr56250.c
+src/pr56799.c
+# pr56837.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr56866.c
+src/pr56899.c
+src/pr56962.c
+src/pr57124.c
+src/pr57130.c
+src/pr57131.c
+src/pr57144.c
+src/pr57281.c
+src/pr57321.c
+src/pr57568.c
+src/pr57829.c
+src/pr57860.c
+src/pr57861.c
+src/pr57875.c
+src/pr57876.c
+src/pr57877.c
+src/pr58209.c
+src/pr58277-1.c
+src/pr58277-2.c
+src/pr58364.c
+src/pr58365.c
+src/pr58385.c
+src/pr58387.c
+src/pr58419.c
+src/pr58431.c
+src/pr58564.c
+src/pr58570.c
+src/pr58574.c
+src/pr58640-2.c
+src/pr58640.c
+src/pr58662.c
+src/pr58726.c
+src/pr58831.c
+src/pr58943.c
+src/pr58984.c
+src/pr59014-2.c
+src/pr59014.c
+src/pr59101.c
+src/pr59221.c
+src/pr59229.c
+src/pr59358.c
+src/pr59387.c
+src/pr59388.c
+src/pr59413.c
+src/pr59643.c
+src/pr59747.c
+# pr60003.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr60017.c
+src/pr60062.c
+src/pr60072.c
+src/pr60454.c
+src/pr60822.c
+# pr60960.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr61306-1.c
+src/pr61306-2.c
+src/pr61306-3.c
+src/pr61375.c
+src/pr61517.c
+src/pr61673.c
+src/pr61682.c
+src/pr61725.c
+src/pr62151.c
+src/pr63209.c
+src/pr63302.c
+src/pr63659.c
+src/pr63843.c
+src/pr64006.c
+# pr64242.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr64255.c
+src/pr64260.c
+src/pr64682.c
+src/pr64718.c
+src/pr64756.c
+src/pr64957.c
+src/pr64979.c
+src/pr65053-1.c
+src/pr65170.c
+src/pr65215-1.c
+src/pr65215-2.c
+src/pr65215-3.c
+src/pr65215-4.c
+src/pr65215-5.c
+src/pr65216.c
+src/pr65369.c
+src/pr65401.c
+src/pr65418-1.c
+src/pr65418-2.c
+src/pr65427.c
+src/pr66187.c
+src/pr66233.c
+src/pr66556.c
+src/pr66757.c
+src/pr66940.c
+src/pr67037.c
+src/pr67226.c
+src/pr67714.c
+src/pr67781.c
+src/pr67929_1.c
+src/pr68143_1.c
+src/pr68185.c
+src/pr68249.c
+src/pr68250.c
+src/pr68321.c
+src/pr68376-1.c
+src/pr68376-2.c
+src/pr68381.c
+# pr68390.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr68506.c
+src/pr68532.c
+src/pr68624.c
+src/pr68648.c
+src/pr68841.c
+src/pr68911.c
+src/pr69097-1.c
+src/pr69097-2.c
+src/pr69320-1.c
+src/pr69320-3.c
+src/pr69320-4.c
+src/pr69403.c
+src/pr69447.c
+src/pr69691.c
+src/pr70005.c
+src/pr70127.c
+src/pr70222-1.c
+src/pr70222-2.c
+src/pr70429.c
+src/pr70566.c
+src/pr70586.c
+src/pr70602.c
+src/pr71083.c
+src/pr71335.c
+# pr71494.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr71550.c
+src/pr71554.c
+src/pr71626-1.c
+src/pr71626-2.c
+src/pr71631.c
+src/pr71700.c
+src/pr7284-1.c
+src/pr77718.c
+src/pr77766.c
+src/pr77767.c
+src/pr78170.c
+src/pr78378.c
+src/pr78436.c
+src/pr78477.c
+src/pr78559.c
+src/pr78586.c
+src/pr78617.c
+# pr78622.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr78675.c
+src/pr78720.c
+src/pr78791.c
+src/pr78856.c
+src/pr79043.c
+src/pr79121.c
+src/pr79286.c
+src/pr79327.c
+src/pr79388.c
+src/pr79450.c
+src/pr79737-1.c
+src/pr80153.c
+src/pr80501.c
+src/pr81281.c
+src/pr81423.c
+src/pr81503.c
+src/pr81555.c
+src/pr81556.c
+src/pr81913.c
+src/pr82192.c
+# pr82210.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr82387.c
+src/pr82388.c
+src/pr82524.c
+src/pr83269.c
+src/pr83298.c
+src/pr83362.c
+src/pr83383.c
+src/pr83477.c
+src/pr84169.c
+src/pr84339.c
+# pr84521.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr84748.c
+src/pr85095.c
+# pr85331.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/pr85529-1.c
+src/pr85529-2.c
+src/pr85582-1.c
+src/pr85582-2.c
+src/pr85582-3.c
+src/pr85756.c
+src/pr86231.c
+src/pr86492.c
+src/pr86714.c
+src/pr86844.c
+src/pr87053.c
+src/pr87290.c
+src/pr87623.c
+src/pr88693.c
+src/pr88714.c
+src/pr88739.c
+src/pr89195.c
+src/pr89369.c
+src/pr89434.c
+src/pr89634.c
+src/pr89826.c
+src/pr90025.c
+src/pr90949.c
+src/pr91137.c
+src/printf-1.c
+src/printf-2.c
+src/printf-chk-1.c
+src/pta-field-1.c
+src/pta-field-2.c
+src/ptr-arith-1.c
+src/pure-1.c
+src/pushpop_macro.c
+src/regstack-1.c
+src/restrict-1.c
+# return-addr.c  # ASLR_MISMATCH: both exit 0, output differs only by ASLR addresses
+# scal-to-vec1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/scal-to-vec2.c
+# scal-to-vec3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/scope-1.c
+src/shiftdi-2.c
+src/shiftdi.c
+src/shiftopt-1.c
+src/simd-1.c
+src/simd-2.c
+# simd-4.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
+src/simd-5.c
+# simd-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/ssad-run.c
+src/stdarg-1.c
+src/stdarg-2.c
+src/stdarg-3.c
+src/stdarg-4.c
+src/stkalign.c
+src/strcmp-1.c
+src/strcpy-1.c
+src/strcpy-2.c
+src/strct-pack-1.c
+src/strct-pack-2.c
+src/strct-pack-3.c
+src/strct-pack-4.c
+src/strct-stdarg-1.c
+src/strct-varg-1.c
+src/string-opt-17.c
+src/string-opt-18.c
+src/string-opt-5.c
+src/strlen-1.c
+src/strlen-2.c
+src/strlen-3.c
+src/strlen-5.c
+# strlen-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/strncmp-1.c
+src/struct-aliasing-1.c
+# struct-cpy-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/struct-ini-1.c
+src/struct-ini-2.c
+src/struct-ini-3.c
+src/struct-ret-1.c
+src/struct-ret-2.c
+src/switch-1.c
+src/tstdi-1.c
+src/unroll-1.c
+src/usad-run.c
+src/user-printf.c
+src/usmul.c
+src/va-arg-10.c
+src/va-arg-11.c
+src/va-arg-12.c
+src/va-arg-13.c
+src/va-arg-14.c
+src/va-arg-15.c
+src/va-arg-16.c
+src/va-arg-17.c
+src/va-arg-18.c
+src/va-arg-19.c
+src/va-arg-1.c
+src/va-arg-20.c
+src/va-arg-21.c
+src/va-arg-22.c
+src/va-arg-23.c
+src/va-arg-24.c
+src/va-arg-26.c
+src/va-arg-2.c
+src/va-arg-4.c
+src/va-arg-5.c
+src/va-arg-6.c
+src/va-arg-7.c
+src/va-arg-8.c
+src/va-arg-9.c
+# va-arg-pack-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/va-arg-trap-1.c
+src/vfprintf-1.c
+src/vfprintf-chk-1.c
+# vla-dealloc-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/vprintf-1.c
+src/vprintf-chk-1.c
+src/vrp-1.c
+src/vrp-2.c
+src/vrp-3.c
+src/vrp-4.c
+src/vrp-5.c
+src/vrp-6.c
+src/vrp-7.c
+src/wchar_t-1.c
+src/widechar-1.c
+src/widechar-2.c
+src/widechar-3.c
+src/zerolen-1.c
+src/zero-struct-1.c
+src/zero-struct-2.c
