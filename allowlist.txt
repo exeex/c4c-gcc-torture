@@ -254,7 +254,7 @@ src/20020219-1.c
 src/20020225-1.c
 src/20020225-2.c
 src/20020226-1.c
-# 20020227-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20020227-1.c
 src/20020307-1.c
 # 20020314-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 src/20020321-1.c
@@ -419,7 +419,7 @@ src/20050218-1.c
 src/20050224-1.c
 # 20050316-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
 # 20050316-2.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
-# 20050316-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20050316-3.c
 src/20050410-1.c
 src/20050502-1.c
 src/20050502-2.c
@@ -442,7 +442,7 @@ src/20060110-1.c
 src/20060110-2.c
 src/20060127-1.c
 src/20060412-1.c
-# 20060420-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20060420-1.c
 src/20060905-1.c
 src/20060910-1.c
 src/20060929-1.c
@@ -810,7 +810,7 @@ src/991016-1.c
 src/991019-1.c
 src/991023-1.c
 src/991030-1.c
-# 991112-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/991112-1.c
 src/991118-1.c
 src/991201-1.c
 src/991202-1.c
@@ -1310,7 +1310,7 @@ src/pr42006.c
 src/pr42142.c
 src/pr42154.c
 # pr42231.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
-# pr42248.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr42248.c
 src/pr42269-2.c
 src/pr42512.c
 src/pr42544.c
@@ -1630,7 +1630,7 @@ src/simd-1.c
 src/simd-2.c
 # simd-4.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
 src/simd-5.c
-# simd-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/simd-6.c
 src/ssad-run.c
 src/stdarg-1.c
 src/stdarg-2.c
@@ -1656,7 +1656,7 @@ src/strlen-5.c
 # strlen-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 src/strncmp-1.c
 src/struct-aliasing-1.c
-# struct-cpy-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/struct-cpy-1.c
 src/struct-ini-1.c
 src/struct-ini-2.c
 src/struct-ini-3.c
@@ -1696,7 +1696,7 @@ src/va-arg-9.c
 src/va-arg-trap-1.c
 src/vfprintf-1.c
 src/vfprintf-chk-1.c
-# vla-dealloc-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/vla-dealloc-1.c
 src/vprintf-1.c
 src/vprintf-chk-1.c
 src/vrp-1.c
