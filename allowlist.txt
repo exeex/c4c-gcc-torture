@@ -184,7 +184,7 @@ src/20001027-1.c
 src/20001031-1.c
 src/20001101.c
 src/20001108-1.c
-# 20001111-1.c  # CLANG_COMPILE_FAIL
+# 20001111-1.c  # CLANG_COMPILE_FAIL: -Wint-conversion is error in clang 18+
 src/20001112-1.c
 src/20001121-1.c
 src/20001124-1.c
@@ -256,7 +256,7 @@ src/20020225-2.c
 src/20020226-1.c
 src/20020227-1.c
 src/20020307-1.c
-# 20020314-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20020314-1.c
 src/20020321-1.c
 src/20020328-1.c
 src/20020402-1.c
@@ -293,7 +293,7 @@ src/20021011-1.c
 src/20021015-1.c
 src/20021024-1.c
 src/20021111-1.c
-# 20021113-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20021113-1.c
 src/20021118-1.c
 src/20021118-2.c
 src/20021118-3.c
@@ -361,7 +361,7 @@ src/20031215-1.c
 src/20031216-1.c
 src/20040208-1.c
 src/20040218-1.c
-# 20040223-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/20040223-1.c
 src/20040307-1.c
 # 20040308-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
 src/20040309-1.c
@@ -546,13 +546,13 @@ src/20190228-1.c
 src/20190820-1.c
 src/900409-1.c
 src/920202-1.c
-# 920302-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# 920302-1.c  # CLANG_COMPILE_FAIL: -Wreturn-mismatch is error in clang 18+
 src/920409-1.c
 src/920410-1.c
 src/920411-1.c
 # 920415-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 src/920428-1.c
-# 920428-2.c  # CLANG_COMPILE_FAIL
+# 920428-2.c  # CLANG_COMPILE_FAIL: nested function definition not allowed
 src/920429-1.c
 src/920501-1.c
 src/920501-2.c
@@ -829,7 +829,7 @@ src/alias-access-path-1.c
 src/align-1.c
 src/align-2.c
 src/align-3.c
-# align-nest.c  # CLANG_COMPILE_FAIL
+# align-nest.c  # CLANG_COMPILE_FAIL: VLA in structure not supported
 src/alloca-1.c
 src/anon-1.c
 src/arith-1.c
@@ -1287,7 +1287,7 @@ src/pr38819.c
 src/pr38969.c
 src/pr39100.c
 src/pr39120.c
-# pr39228.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# pr39228.c  # RUNTIME_FAIL: __LDBL_MAX__ values are double-precision (fp128 literal pipeline needed)
 src/pr39233.c
 src/pr39240.c
 src/pr39339.c
