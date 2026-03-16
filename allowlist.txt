@@ -852,14 +852,14 @@ src/bitfld-6.c
 src/bitfld-7.c
 src/bswap-1.c
 src/bswap-2.c
-# builtin-bitops-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/builtin-bitops-1.c
 src/builtin-constant.c
 # builtin-prefetch-1.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
 # builtin-prefetch-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 # builtin-prefetch-3.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
-# builtin-prefetch-4.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
-# builtin-prefetch-5.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
-# builtin-prefetch-6.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/builtin-prefetch-4.c
+src/builtin-prefetch-5.c
+src/builtin-prefetch-6.c
 # builtins/20010124-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 # builtins/20010124-1-lib.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 # builtins/abs-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
