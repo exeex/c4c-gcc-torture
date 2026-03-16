@@ -1398,7 +1398,7 @@ src/pr55875.c
 src/pr56051.c
 src/pr56250.c
 src/pr56799.c
-# pr56837.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr56837.c
 src/pr56866.c
 src/pr56899.c
 src/pr56962.c
