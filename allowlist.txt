@@ -184,7 +184,7 @@ src/20001027-1.c
 src/20001031-1.c
 src/20001101.c
 src/20001108-1.c
-# 20001111-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# 20001111-1.c  # CLANG_COMPILE_FAIL
 src/20001112-1.c
 src/20001121-1.c
 src/20001124-1.c
@@ -377,7 +377,7 @@ src/20040409-3.c
 src/20040409-3w.c
 src/20040411-1.c
 # 20040423-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
-# 20040520-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# 20040520-1.c  # CLANG_COMPILE_FAIL
 src/20040625-1.c
 src/20040629-1.c
 src/20040703-1.c
@@ -552,7 +552,7 @@ src/920410-1.c
 src/920411-1.c
 # 920415-1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
 src/920428-1.c
-# 920428-2.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# 920428-2.c  # CLANG_COMPILE_FAIL
 src/920429-1.c
 src/920501-1.c
 src/920501-2.c
@@ -829,7 +829,7 @@ src/alias-access-path-1.c
 src/align-1.c
 src/align-2.c
 src/align-3.c
-# align-nest.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+# align-nest.c  # CLANG_COMPILE_FAIL
 src/alloca-1.c
 src/anon-1.c
 src/arith-1.c
@@ -1451,7 +1451,7 @@ src/pr60062.c
 src/pr60072.c
 src/pr60454.c
 src/pr60822.c
-# pr60960.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/pr60960.c
 src/pr61306-1.c
 src/pr61306-2.c
 src/pr61306-3.c
@@ -1619,7 +1619,7 @@ src/pushpop_macro.c
 src/regstack-1.c
 src/restrict-1.c
 # return-addr.c  # ASLR_MISMATCH: both exit 0, output differs only by ASLR addresses
-# scal-to-vec1.c  # CLANG_COMPILE_FAIL or BACKEND_FAIL
+src/scal-to-vec1.c
 src/scal-to-vec2.c
 # scal-to-vec3.c  # CLANG_COMPILE_FAIL: GCC extension not supported by clang
 src/scope-1.c
