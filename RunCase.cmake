@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-foreach(v COMPILER CLANG SRC ROOT OUT_LL OUT_CLANG_BIN OUT_C2LL_BIN)
+foreach(v COMPILER CLANG SRC ROOT OUT_CLANG_BIN OUT_C2LL_BIN)
   if(NOT DEFINED ${v} OR "${${v}}" STREQUAL "")
     message(FATAL_ERROR "Missing required -D${v}=...")
   endif()
@@ -36,12 +36,15 @@ if((RUN_MEM_MB GREATER 0) OR (RUN_CPU_SEC GREATER 0))
   endif()
 endif()
 
-get_filename_component(out_ll_dir "${OUT_LL}" DIRECTORY)
 get_filename_component(out_clang_dir "${OUT_CLANG_BIN}" DIRECTORY)
 get_filename_component(out_c2ll_dir "${OUT_C2LL_BIN}" DIRECTORY)
-file(MAKE_DIRECTORY "${out_ll_dir}")
 file(MAKE_DIRECTORY "${out_clang_dir}")
 file(MAKE_DIRECTORY "${out_c2ll_dir}")
+
+find_program(BASH_EXECUTABLE NAMES bash)
+if(NOT BASH_EXECUTABLE)
+  message(FATAL_ERROR "bash is required for piped test execution")
+endif()
 
 execute_process(
   COMMAND "${CLANG}" -std=gnu89 -w -I "${ROOT}" "${SRC}" -o "${OUT_CLANG_BIN}"
@@ -83,33 +86,30 @@ endif()
 set(clang_all_out "${clang_run_out}${clang_run_err}")
 
 execute_process(
-  COMMAND "${COMPILER}" "${SRC}" -o "${OUT_LL}"
+  COMMAND "${BASH_EXECUTABLE}" "-lc"
+          "front_err=$(mktemp); back_err=$(mktemp); \
+           \"${COMPILER}\" \"${SRC}\" 2>\"\${front_err}\" | \"${CLANG}\" -x ir - -o \"${OUT_C2LL_BIN}\" 2>\"\${back_err}\"; \
+           st_front=\${PIPESTATUS[0]}; st_back=\${PIPESTATUS[1]}; \
+           if [ \${st_front} -ne 0 ]; then cat \"\${front_err}\"; rm -f \"\${front_err}\" \"\${back_err}\"; exit 101; fi; \
+           if [ \${st_back} -ne 0 ]; then cat \"\${back_err}\"; rm -f \"\${front_err}\" \"\${back_err}\"; exit 102; fi; \
+           rm -f \"\${front_err}\" \"\${back_err}\""
   WORKING_DIRECTORY "${ROOT}"
   TIMEOUT "${CASE_TIMEOUT_SEC}"
-  RESULT_VARIABLE front_rc
-  OUTPUT_VARIABLE front_out
-  ERROR_VARIABLE front_err
+  RESULT_VARIABLE pipe_rc
+  OUTPUT_VARIABLE pipe_out
+  ERROR_VARIABLE pipe_err
 )
-if(front_rc MATCHES "timeout")
-  message(FATAL_ERROR "[FRONTEND_TIMEOUT] ${SRC} exceeded ${CASE_TIMEOUT_SEC}s")
+if(pipe_rc MATCHES "timeout")
+  message(FATAL_ERROR "[COMPILE_PIPE_TIMEOUT] ${SRC} exceeded ${CASE_TIMEOUT_SEC}s")
 endif()
-if(NOT front_rc EQUAL 0)
-  message(FATAL_ERROR "[FRONTEND_FAIL] ${SRC}\n${front_err}")
+if(pipe_rc EQUAL 101)
+  message(FATAL_ERROR "[FRONTEND_FAIL] ${SRC}\n${pipe_out}${pipe_err}")
 endif()
-
-execute_process(
-  COMMAND "${CLANG}" "${OUT_LL}" -o "${OUT_C2LL_BIN}"
-  WORKING_DIRECTORY "${ROOT}"
-  TIMEOUT "${CASE_TIMEOUT_SEC}"
-  RESULT_VARIABLE back_rc
-  OUTPUT_VARIABLE back_out
-  ERROR_VARIABLE back_err
-)
-if(back_rc MATCHES "timeout")
-  message(FATAL_ERROR "[BACKEND_TIMEOUT] ${SRC} exceeded ${CASE_TIMEOUT_SEC}s")
+if(pipe_rc EQUAL 102)
+  message(FATAL_ERROR "[BACKEND_FAIL] ${SRC}\n${pipe_out}${pipe_err}")
 endif()
-if(NOT back_rc EQUAL 0)
-  message(FATAL_ERROR "[BACKEND_FAIL] ${SRC}\n${back_err}")
+if(NOT pipe_rc EQUAL 0)
+  message(FATAL_ERROR "[COMPILE_PIPE_FAIL] ${SRC}\n${pipe_out}${pipe_err}")
 endif()
 
 if(RUN_WRAPPER_CMD)
